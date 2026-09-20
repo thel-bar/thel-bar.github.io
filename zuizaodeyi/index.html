@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="最早的一部神话集 - 深度解析《山海经》的历史背景、地理方位、神话人物及其在中国古代文学与民俗中的深远影响。">
+    <meta name="keywords" content="最早的一部神话集, 山海经, 古籍, 神话传说, 中国神话">
+    <title>最早的一部神话集 - 《山海经》古籍考辨与文化溯源</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f9f7f2;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+        }
+
+        /* Intro Grid */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .intro-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .intro-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Features / Categories */
+        .features {
+            background-color: var(--card-bg);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Table of Contents / List */
+        .myth-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .myth-item {
+            background: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .myth-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .myth-body {
+            padding: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f8f8;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none; /* Simplified mobile nav for this demo */
+            }
+
+            .nav-wrapper {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">山海<span>经</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#overview">概览</a></li>
+                    <li><a href="#content">内容解析</a></li>
+                    <li><a href="#myths">神话分类</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>最早的一部神话集</h1>
+            <p>探索《山海经》——这部成书于战国至汉初、记录上古地理与神怪的百科全书。它不仅是神话的宝库，更是解读中华文明起源的钥匙。</p>
+            <a href="#content" class="btn">开始阅读</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="intro-section">
+            <h2 class="section-title">古籍概览</h2>
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>为何称其为“最早”的神话集？</h2>
+                    <p>《山海经》并非一人一时之作，而是经历了漫长的积累过程，主要成书于战国至汉初。它是中国先秦重要典籍，也是一部富于神话传说的最古老的地理书。</p>
+                    <p>作为“最早的一部神话集”，它填补了上古时期口耳相传神话在文字记录上的空白。书中记载了大量的神话传说，如夸父逐日、精卫填海、大禹治水等，这些故事不仅情节生动，更蕴含了先民对自然、宇宙和人类起源的朴素认知与探索精神。</p>
+                    <p>除了神话，《山海经》还包含了大量的地理知识，记载了山川、道里、民族、物产、药物、祭祀、巫医等，因此也被视为一部古代的地理志。</p>
+                </div>
+                <div class="intro-image">
+                    <img src="https://picsum.photos/seed/shanhaijing/600/400.jpg" alt="古代卷轴与山水画意境">
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Analysis -->
+        <section id="content" class="features">
+            <div class="container">
+                <h2 class="section-title">核心内容解析</h2>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">🏔️</span>
+                        <h3>山川地理</h3>
+                        <p>全书共十八卷，详细记录了四百多座山、三百条水道以及各山各水的地理位置、物产分布和气候特征。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">👹</span>
+                        <h3>神兽异人</h3>
+                        <p>书中描绘了大量的异兽、神仙和方士形象，如九尾狐、毕方鸟、刑天等，充满了奇幻色彩。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">📜</span>
+                        <h3>祭祀巫术</h3>
+                        <p>详细记载了先秦时期的祭祀仪式、祝祷辞令和巫术活动，反映了当时的宗教信仰体系。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🌊</span>
+                        <h3>海外与海内</h3>
+                        <p>通过“海内”、“海外”等篇章，构建了一个宏大的地理世界观，展示了古人对于世界边界的想象。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Myth Categories -->
+        <section id="myths">
+            <div class="container">
+                <h2 class="section-title">经典神话分类</h2>
+                <div class="myth-list">
+                    <div class="myth-item">
+                        <div class="myth-header">创世神话</div>
+                        <div class="myth-body">
+                            记载了盘古开天、女娲造人补天等关于宇宙起源和人类诞生的故事，是理解中华文明宇宙观的基础。
+                        </div>
+                    </div>
+                    <div class="myth-item">
+                        <div class="myth-header">英雄神话</div>
+                        <div class="myth-body">
+                            以大禹治水、后羿射日、夸父逐日为代表，歌颂了先民征服自然、改造环境的英雄气概。
+                        </div>
+                    </div>
+                    <div class="myth-item">
+                        <div class="myth-header">战争神话</div>
+                        <div class="myth-body">
+                            描述了黄帝战蚩尤、炎黄之战等早期部落冲突，反映了中华民族的融合过程。
+                        </div>
+                    </div>
+                    <div class="myth-item">
+                        <div class="myth-header">奇物传说</div>
+                        <div class="myth-body">
+                            诸如钟山之神烛龙、不死药等神秘事物的记载，充满了浪漫主义色彩和未知探索的渴望。
+                        </div>
+                    </div>
+                    <div class="myth-item">
+                        <div class="myth-header">地理方国</div>
+                        <div class="myth-body">
+                            记录了当时存在的众多方国、部落和民族，是研究先秦历史地理和民族迁徙的重要资料。
+                        </div>
+                    </div>
+                    <div class="myth-item">
+                        <div class="myth-header">神灵谱系</div>
+                        <div class="myth-body">
+                            提供了天神、地祇、人鬼的等级划分和相互关系，构成了早期的神学体系。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <h2 class="section-title">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">《山海经》究竟是谁写的？</div>
+                <div class="faq-answer">
+                    <p>学术界普遍认为《山海经》非一人一时之作。它主要成书于战国至汉初，由不同时期的学者根据口头传说、实地考察和文献资料汇编而成。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">《山海经》里的地理方位准确吗？</div>
+                <div class="faq-answer">
+                    <p>《山海经》中的地理记载带有浓厚的想象色彩和传说成分。其中“海内十洲记”等部分更多是方士构建的理想世界。但书中的许多山川名称和地理线索，经过现代学者考证，确实与一些古代地理实存或历史地名有关。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">为什么说它是最早的神话集？</div>
+                <div class="faq-answer">
+                    <p>在中国先秦典籍中，《山海经》是保存神话资料最为丰富、系统的一部。它将原本零散的口耳相传神话进行了文字整理和分类记录，因此被公认为中国最早的神话集。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 山海经文化研究. 保留所有权利. 本页面旨在科普古籍文化，仅供学习参考。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
