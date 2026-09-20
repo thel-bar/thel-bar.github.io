@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="审判流圣骑士加点指南 - 深度解析审判流圣骑士的核心技能选择、属性加点推荐、装备搭配及实战操作技巧，助你打造最强审判骑士。">
+    <meta name="keywords" content="审判流圣骑士加点, 圣骑士加点, 审判流, 骑士攻略, 游戏攻略">
+    <title>审判流圣骑士加点 - 核心技能与属性构建全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4af37;
+            --primary-dark: #aa8c2c;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-secondary: #606f7b;
+            --accent-red: #e74c3c;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e272e 0%, #2c3e50 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, rgba(44, 62, 80, 0.8), var(--bg-color)), url('https://picsum.photos/seed/knight/1600/600') center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #1e272e;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        main {
+            padding: 40px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Skill Cards */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .skill-level {
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .skill-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: #e8f6f3;
+            color: #16a085;
+            margin-right: 5px;
+        }
+
+        /* Attribute Table */
+        .attr-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .attr-table th, .attr-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .attr-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-main);
+            width: 40%;
+        }
+
+        .attr-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Sidebar */
+        aside {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-red);
+            padding-left: 10px;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checklist li::before {
+            content: "✔";
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist strong {
+            display: block;
+            color: var(--text-main);
+        }
+
+        .checklist span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding-left: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e272e;
+            color: #bdc3c7;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <div class="logo-icon">⚔</div>
+            <span>圣骑士攻略站</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">技能树</a></li>
+                <li><a href="#">装备推荐</a></li>
+                <li><a href="#">副本攻略</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <h1>审判流圣骑士加点</h1>
+        <p>从防御型坦克向高爆发审判者的完美转型。掌握核心技能取舍，在PVE副本与PVP竞技场中主宰战场。</p>
+        <button class="btn" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">查看加点方案</button>
+    </div>
+</div>
+
+<main class="container">
+    <div class="content-grid">
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <!-- 核心技能解析 -->
+            <section id="skills">
+                <h2 class="section-title">核心技能加点详解</h2>
+                <p style="margin-bottom: 20px; color: var(--text-secondary);">
+                    审判流圣骑士的核心在于利用高爆发的魔法伤害配合神圣属性，快速削减敌人血量。以下是根据主流版本优化的技能优先级。
+                </p>
+                
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">神圣裁决</span>
+                            <span class="skill-level">必满 (20/20)</span>
+                        </div>
+                        <p class="skill-desc">审判流的核心输出技能，对直线敌人造成巨额神圣伤害并附加破甲效果。建议在满级时释放以最大化收益。</p>
+                        <div>
+                            <span class="skill-tag">核心输出</span>
+                            <span class="skill-tag">AOE</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">圣光普照</span>
+                            <span class="skill-level">优先加满 (15/15)</span>
+                        </div>
+                        <p class="skill-desc">提供持续的治疗和护盾，是审判流生存的关键。点满后可大幅提升抗性，确保在BOSS战中的存活率。</p>
+                        <div>
+                            <span class="skill-tag">生存保障</span>
+                            <span class="skill-tag">持续治疗</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">天罚之锤</span>
+                            <span class="skill-level">次优先 (10/10)</span>
+                        </div>
+                        <p class="skill-desc">将目标击飞并造成眩晕，是控制链的重要一环。配合审判技能使用，可打出完美的爆发连招。</p>
+                        <div>
+                            <span class="skill-tag">控制</span>
+                            <span class="skill-tag">起手技</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">虔诚祈祷</span>
+                            <span class="skill-level">10-12级</span>
+                        </div>
+                        <p class="skill-desc">被动技能，提升全队神圣伤害。由于SP（技能点）紧缺，建议点至能提升主要输出技能伤害的程度即可。</p>
+                        <div>
+                            <span class="skill-tag">辅助增益</span>
+                            <span class="skill-tag">被动</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 属性加点建议 -->
+            <section id="attributes">
+                <h2 class="section-title">属性与天赋加点建议</h2>
+                <div style="overflow-x: auto;">
+                    <table class="attr-table">
+                        <thead>
+                            <tr>
+                                <th>属性/天赋</th>
+                                <th>加点建议</th>
+                                <th>理由分析</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>力量</strong></td>
+                                <td>30%</td>
+                                <td>提供基础物理攻击力，增加技能伤害基数。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>智力</strong></td>
+                                <td>60%</td>
+                                <td>智力直接提升魔法攻击力和神圣伤害，审判流核心属性。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>精神</strong></td>
+                                <td>10%</td>
+                                <td>略微提升法力值上限和回蓝速度，保证技能循环。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>敏捷</strong></td>
+                                <td>0%</td>
+                                <td>审判流不依赖物理暴击和闪避，优先保证伤害与生存。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2 class="section-title">常见问题解答</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: 审判流和坦克流圣骑士有什么区别？</div>
+                    <div class="faq-answer">
+                        A: 坦克流侧重于“守护”，主要加点防御技能和嘲讽，承担伤害。而审判流侧重于“输出”，将圣骑士定位为半坦克半输出的混合职业，利用高伤害技能快速清场。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 后期SP不足怎么办？</div>
+                    <div class="faq-answer">
+                        A: 建议舍弃低等级的通用技能（如普通攻击类），优先保留具有群体效果或核心机制的大技能。如果不常参与PVP，PVP技能树可暂不点满。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 装备选择上有什么禁忌？</div>
+                    <div class="faq-answer">
+                        A: 避免堆叠过多的物理暴击属性。由于审判流主要依靠固定数值和智力加成，物理暴击收益较低，应选择带有“魔法伤害加成”或“神圣伤害加成”的装备词条。
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <h3 class="sidebar-title">加点流程图</h3>
+            <ul class="checklist">
+                <li>
+                    <strong>第一优先级</strong>
+                    <span>主输出技能（神圣裁决、审判之光）</span>
+                </li>
+                <li>
+                    <strong>第二优先级</strong>
+                    <span>生存与控制（圣光普照、天罚之锤）</span>
+                </li>
+                <li>
+                    <strong>第三优先级</strong>
+                    <span>被动增益（虔诚祈祷、信仰之力）</span>
+                </li>
+                <li>
+                    <strong>最后分配</strong>
+                    <span>剩余SP填充通用技能</span>
+                </li>
+            </ul>
+
+            <div style="margin-top: 30px; background: #fff3cd; padding: 15px; border-radius: 4px; font-size: 0.9rem; color: #856404;">
+                <strong>💡 小贴士：</strong>
+                <p style="margin-top: 5px;">审判流在PVP中非常克制暗影系敌人，但面对高爆发物理职业时需注意走位，避免被瞬间秒杀。</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 圣骑士攻略站 - 专注于游戏攻略与数据分析</p>
+        <p style="font-size: 0.8rem; color: #7f8c8d;">本站内容仅供玩家参考，游戏数值以官方最新版本为准。</p>
+    </div>
+</footer>
+
+</body>
+</html>
