@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="阿姨和我 - 深度探讨两代人相处智慧、生活互助与情感交流的实用指南。提供家庭关系维护、代际沟通技巧及生活服务资讯。">
+    <meta name="keywords" content="阿姨和我,家庭关系,代际沟通,生活服务,家政技巧">
+    <title>阿姨和我 - 家庭关系维护与代际相处智慧指南</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        /* Main Content Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Article List */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .article-body {
+            padding: 25px;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hot-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .hot-index {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .hot-list a {
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        .hot-list a:hover {
+            color: var(--accent-color);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 60px 0;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+            display: none; /* JS will toggle */
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            aside {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>阿姨</span>和我
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">相处之道</a></li>
+                    <li><a href="#">生活技巧</a></li>
+                    <li><a href="#">情感咨询</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍 搜索</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>构建和谐的家庭代际关系</h1>
+                <p>探索与家庭保姆、阿姨相处的艺术。从生活习惯的磨合到情感的建立，我们为您提供实用的沟通技巧与生活指南。</p>
+                <div class="hero-tags">
+                    <span class="tag">家庭和谐</span>
+                    <span class="tag">保姆管理</span>
+                    <span class="tag">情感交流</span>
+                    <span class="tag">生活百科</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container content-grid">
+            <!-- Articles Column -->
+            <div class="articles-col">
+                <h2 class="section-title">最新文章</h2>
+                
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/kitchen/800/400" alt="厨房里的和谐" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>生活技巧</span>
+                            <span>•</span>
+                            <span>2023-10-24</span>
+                        </div>
+                        <h3 class="article-title">如何与家政阿姨建立互信的厨房规则？</h3>
+                        <p class="article-excerpt">
+                            厨房是家庭生活的高频互动区，制定清晰的卫生标准和饮食偏好清单，不仅能保障食品安全，更是尊重对方劳动成果的表现。本文将详细解析如何通过沟通达成共识。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/laundry/800/400" alt="洗衣机的秘密" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>日常相处</span>
+                            <span>•</span>
+                            <span>2023-10-22</span>
+                        </div>
+                        <h3 class="article-title">关于衣物洗涤的那些“潜规则”与沟通技巧</h3>
+                        <p class="article-excerpt">
+                            很多家庭矛盾源于对衣物材质的不同理解。了解羊毛、真丝与棉麻的正确洗涤方式，并教会阿姨使用洗衣机的高级功能，能极大地提升生活品质。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/tea/800/400" alt="茶桌上的闲聊" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>情感交流</span>
+                            <span>•</span>
+                            <span>2023-10-20</span>
+                        </div>
+                        <h3 class="article-title">让阿姨感到被尊重：家庭中的小恩小惠</h3>
+                        <p class="article-excerpt">
+                            不仅仅是工资，尊重和关怀同样重要。在节假日准备一份小礼物，或者在忙碌时的一句问候，都能让阿姨更安心地工作，为家庭创造更温暖的环境。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/pets/800/400" alt="宠物护理" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>宠物护理</span>
+                            <span>•</span>
+                            <span>2023-10-18</span>
+                        </div>
+                        <h3 class="article-title">如何科学地委托阿姨照顾家里的宠物？</h3>
+                        <p class="article-excerpt">
+                            宠物是家庭的重要成员。在交接喂养、遛弯和健康观察任务时，详细的观察记录表和清晰的指令是避免误会的关键。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门话题</h3>
+                    <ul class="hot-list">
+                        <li><span class="hot-index">1</span><a href="#">如何应对阿姨的“小动作”？</a></li>
+                        <li><span class="hot-index">2</span><a href="#">挑选家政阿姨的面试技巧</a></li>
+                        <li><span class="hot-index">3</span><a href="#">家庭隐私与信任边界</a></li>
+                        <li><span class="hot-index">4</span><a href="#">节日红包怎么发最得体？</a></li>
+                        <li><span class="hot-index">5</span><a href="#">处理家庭纠纷的沟通三要素</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">实用工具</h3>
+                    <ul class="hot-list">
+                        <li><a href="#">保姆工资参考表</a></li>
+                        <li><a href="#">家庭清洁日历模板</a></li>
+                        <li><a href="#">健康饮食搭配指南</a></li>
+                        <li><a href="#">紧急联系卡设计</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget" style="background-color: #fff3e0; border: 1px solid #ffe0b2;">
+                    <h3 class="widget-title" style="color: #e65100;">关注我们</h3>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;">获取更多家庭相处智慧</p>
+                    <button style="width: 100%; padding: 10px; background-color: #e67e22; color: white; border: none; border-radius: 4px; cursor: pointer;">订阅周刊</button>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                
+                <div class="faq-item active">
+                    <div class="faq-question">阿姨频繁更换工作怎么办？如何筛选靠谱的阿姨？ <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>阿姨频繁离职通常是因为薪资待遇、工作强度或家庭氛围。建议在筛选时通过正规中介核实背景，面试时重点考察其责任心和过往评价。签订正式合同并明确双方权责，也是稳定工作的基础。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何优雅地处理阿姨在生活中的小疏忽？ <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>批评应避开情绪激动的时刻，采用“三明治法”：先肯定做得好的地方，再指出具体需要改进的细节，最后给予鼓励。避免在公开场合或当着客人面批评，维护对方的尊严。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">阿姨生病或请假，家里没人照顾怎么办？ <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>建议建立备用联系人名单，或提前了解社区内的互助资源。对于家庭有老人或小孩的情况，建议储备一些应急的清洁用品和简易食品，以备不时之需。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">给阿姨买礼物或发红包有讲究吗？ <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>有讲究。礼物应体现心意而非贵重，如节日时的水果、保健品或实用的居家小家电。红包金额应结合当地生活水平，通常在春节、中秋等传统节日发放，金额要吉利且大方。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 14px;">致力于帮助城市家庭建立和谐、尊重的代际关系，提供专业的家政管理与情感沟通指导。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">相处之道</a></li>
+                        <li><a href="#">生活百科</a></li>
+                        <li><a href="#">职场沟通</a></li>
+                        <li><a href="#">健康养生</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">商务洽谈</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 阿姨和我 - 家庭关系维护与代际相处智慧指南. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // 简单的FAQ折叠交互
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                
+                // 切换加号减号
+                const icon = item.querySelector('span');
+                if (parent.classList.contains('active')) {
+                    icon.textContent = '-';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+
+        // 搜索按钮交互
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const query = prompt("请输入您想了解的内容：");
+            if(query) {
+                alert("您正在搜索关于“" + query + "”的相关内容。在实际网站中，这将跳转到搜索结果页。");
+            }
+        });
+    </script>
+</body>
+</html>
